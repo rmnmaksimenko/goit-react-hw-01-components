@@ -1,16 +1,35 @@
+import Profile from './profile';
+import user from 'data/user.json';
+import { Global, css } from '@emotion/react';
+
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
+    <div>
+      <Global
+        styles={css`
+          body {
+            background-color: #242424;
+            color: #fff;
+          }
+          ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+          }
+          p {
+            margin: 0;
+          }
+        `}
+      />
+      {
+        <Profile
+          username={user.username}
+          tag={user.tag}
+          location={user.location}
+          avatar={user.avatar}
+          stats={user.stats}
+        />
+      }
     </div>
   );
 };
