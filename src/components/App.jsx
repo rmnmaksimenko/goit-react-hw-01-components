@@ -1,5 +1,9 @@
 import Profile from './profile';
+import Statistics from './statistics';
+
 import user from 'data/user.json';
+import data from 'data/data.json';
+
 import { Global, css } from '@emotion/react';
 
 export const App = () => {
@@ -30,6 +34,7 @@ export const App = () => {
           stats={user.stats}
         />
       }
+      {<Statistics title={'Upload'} stats={data} />}
     </div>
   );
 };
