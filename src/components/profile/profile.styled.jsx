@@ -20,6 +20,7 @@ export const Description = styled.div`
 `;
 export const Avatar = styled.img`
   border-radius: 50%;
+  background-color: #c3c3c3;
 `;
 export const Name = styled.p`
   font-size: 16px;
@@ -32,11 +33,13 @@ export const Tag = styled.p`
   font-size: 14px;
   line-height: 1.2;
   margin-bottom: 8px;
+  font-weight: 500;
 `;
 export const Location = styled.p`
   color: #666;
   font-size: 14px;
   line-height: 1.2;
+  font-weight: 500;
 `;
 export const Stats = styled.ul`
   background-color: #ccc;
@@ -55,8 +58,11 @@ export const Label = styled.span`
   display: flex;
   justify-content: center;
   margin-bottom: 6px;
+  text-transform: capitalize;
+  color: #444;
 `;
 export const Quantity = styled.span`
   display: flex;
   justify-content: center;
+  font-weight: 700;
 `;
