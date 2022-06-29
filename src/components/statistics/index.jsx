@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+import PropTypes, { number } from 'prop-types';
 import {
   StatisticsCard,
   Title,
@@ -6,7 +6,7 @@ import {
   Item,
   Label,
   Percentage,
-} from './statistixs.styled';
+} from './statistics.styled';
 
 const Statistics = ({ title, stats }) => {
   const statsMarkup = stats.map(stat => {
@@ -23,6 +23,17 @@ const Statistics = ({ title, stats }) => {
       <StatList>{statsMarkup}</StatList>
     </StatisticsCard>
   );
+};
+
+Statistics.propTypes = {
+  title: PropTypes.string,
+  stats: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string,
+      label: PropTypes.string,
+      percentage: PropTypes.number,
+    })
+  ),
 };
 
 export default Statistics;

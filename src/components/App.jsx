@@ -1,8 +1,12 @@
 import Profile from './profile';
 import Statistics from './statistics';
+import FriendList from './friendlist';
+import Transactions from './transactions';
 
 import user from 'data/user.json';
 import data from 'data/data.json';
+import friendStats from 'data/friends.json';
+import transactions from 'data/transactions.json';
 
 import { Global, css } from '@emotion/react';
 
@@ -35,6 +39,8 @@ export const App = () => {
         />
       }
       {<Statistics title={'Upload'} stats={data} />}
+      {<FriendList friends={friendStats} />}
+      {<Transactions data={transactions} />}
     </div>
   );
 };
