@@ -29,18 +29,18 @@ export const App = () => {
           }
         `}
       />
-      {
-        <Profile
-          username={user.username}
-          tag={user.tag}
-          location={user.location}
-          avatar={user.avatar}
-          stats={user.stats}
-        />
-      }
-      {<Statistics title={'Upload'} stats={data} />}
-      {<FriendList friends={friendStats} />}
-      {<Transactions data={transactions} />}
+
+      <Profile
+        username={user.username}
+        tag={user.tag}
+        location={user.location}
+        avatar={user.avatar}
+        stats={user.stats}
+      />
+
+      <Statistics stats={data} />
+      <FriendList friends={friendStats} />
+      <Transactions data={transactions} />
     </div>
   );
 };

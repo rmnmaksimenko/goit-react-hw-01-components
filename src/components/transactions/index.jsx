@@ -2,15 +2,6 @@ import PropTypes from 'prop-types';
 import { TransactionBox, TransactionTable } from './transactions.styled';
 
 const Transactions = ({ data }) => {
-  const transactionsMarkup = data.map(transactrion => {
-    return (
-      <tr key={transactrion.id}>
-        <td>{transactrion.type}</td>
-        <td>{transactrion.amount}</td>
-        <td>{transactrion.currency} </td>
-      </tr>
-    );
-  });
   return (
     <TransactionBox>
       <TransactionTable>
@@ -21,7 +12,15 @@ const Transactions = ({ data }) => {
             <th>Currency</th>
           </tr>
         </thead>
-        <tbody>{transactionsMarkup}</tbody>
+        <tbody>
+          {data.map(transactrion => (
+            <tr key={transactrion.id}>
+              <td>{transactrion.type}</td>
+              <td>{transactrion.amount}</td>
+              <td>{transactrion.currency} </td>
+            </tr>
+          ))}
+        </tbody>
       </TransactionTable>
     </TransactionBox>
   );

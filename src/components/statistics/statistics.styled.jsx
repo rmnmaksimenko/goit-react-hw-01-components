@@ -35,8 +35,3 @@ export const Percentage = styled.span`
   display: block;
   color: #000;
 `;
-
-//   <ul class="stat-list">
-//     <li class="item">
-//       <span class="label">.docx</span>
-//       <span class="percentage">4%</span>

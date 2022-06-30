@@ -12,6 +12,7 @@ import {
 } from './profile.styled';
 
 const Profile = ({ username, tag, location, avatar, stats }) => {
+  const { followers, views, likes } = stats;
   return (
     <ProfileCard>
       <Description>
@@ -23,15 +24,15 @@ const Profile = ({ username, tag, location, avatar, stats }) => {
       <Stats>
         <li>
           <Label>followers</Label>
-          <Quantity>{stats.followers}</Quantity>
+          <Quantity>{followers}</Quantity>
         </li>
         <li>
           <Label>views</Label>
-          <Quantity>{stats.views}</Quantity>
+          <Quantity>{views}</Quantity>
         </li>
         <li>
           <Label>likes</Label>
-          <Quantity>{stats.likes}</Quantity>
+          <Quantity>{likes}</Quantity>
         </li>
       </Stats>
     </ProfileCard>
@@ -39,7 +40,7 @@ const Profile = ({ username, tag, location, avatar, stats }) => {
 };
 
 Profile.propTypes = {
-  imageUrl: PropTypes.string,
+  username: PropTypes.string,
   tag: PropTypes.string,
   location: PropTypes.string,
   avatar: PropTypes.string,

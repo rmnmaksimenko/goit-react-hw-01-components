@@ -9,18 +9,17 @@ import {
 } from './statistics.styled';
 
 const Statistics = ({ title, stats }) => {
-  const statsMarkup = stats.map(stat => {
-    return (
-      <Item key={stat.id}>
-        <Label>{stat.label}</Label>
-        <Percentage>{stat.percentage}%</Percentage>
-      </Item>
-    );
-  });
   return (
     <StatisticsCard>
-      {{ title } && <Title>{title}</Title>}
-      <StatList>{statsMarkup}</StatList>
+      {title && <Title>{title}</Title>}
+      <StatList>
+        {stats.map(stat => (
+          <Item key={stat.id}>
+            <Label>{stat.label}</Label>
+            <Percentage>{stat.percentage}%</Percentage>
+          </Item>
+        ))}
+      </StatList>
     </StatisticsCard>
   );
 };
