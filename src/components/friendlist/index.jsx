@@ -7,9 +7,9 @@ const FriendList = ({ friends }) => {
     <FriendListBlock>
       <Title>Friend list</Title>
       <FriendlistMarkup>
-        {friends.map(friend => (
-          <FriendListItem key={friend.id} friend={friend} />
-        ))}
+        {friends.map(friend => {
+          return <FriendListItem key={friend.id} friend={friend} />;
+        })}
       </FriendlistMarkup>
     </FriendListBlock>
   );
@@ -18,10 +18,7 @@ const FriendList = ({ friends }) => {
 FriendList.propTypes = {
   friends: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.number,
-      isOnline: PropTypes.bool,
-      avatar: PropTypes.string,
-      name: PropTypes.string,
+      id: PropTypes.number.isRequired,
     })
   ),
 };
