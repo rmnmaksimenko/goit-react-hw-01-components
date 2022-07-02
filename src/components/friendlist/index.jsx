@@ -7,9 +7,9 @@ const FriendList = ({ friends }) => {
     <FriendListBlock>
       <Title>Friend list</Title>
       <FriendlistMarkup>
-        {friends.map(friend => {
-          return <FriendListItem key={friend.id} friend={friend} />;
-        })}
+        {friends.map(friend => (
+          <FriendListItem key={friend.id} friend={friend} />
+        ))}
       </FriendlistMarkup>
     </FriendListBlock>
   );
