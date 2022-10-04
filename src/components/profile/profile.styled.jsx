@@ -59,7 +59,9 @@ export const Label = styled.span`
   justify-content: center;
   margin-bottom: 6px;
   text-transform: capitalize;
-  color: #444;
+  font-size: 14px;
+  font-weight: 500;
+  color: #666;
 `;
 export const Quantity = styled.span`
   display: flex;
